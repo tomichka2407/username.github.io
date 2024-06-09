@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+            background-color: #f5f5f5; /* Light grey background */
+            color: #333; /* Dark text */
+        }
+        section {
+            padding: 60px 0;
+        }
+        #home {
+            background: #fff; /* White background for sections */
+        }
+        #books, #about, #contact {
+            background: #f9f9f9; /* Light grey background for sections */
+        }
+        .contact-container {
+            background-color: #fff; /* White background for contact container */
+            color: #333; /* Dark text */
+            padding: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .social-media a, .contact-info a {
+            color: #0066cc; /* Blue color for links */
+        }
+        .map-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="https://img.freepik.com/vektoren-premium/logo-buchhandlung_49058-7.jpg?w=2000" alt="book monastery" style="max-height: 40px; max-width: 150px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home" data-translate="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#books" data-translate="books">Books</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about" data-translate="about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" data-translate="contact">Contact Us</a></li>
+            </ul>
+            <button id="lang-en" class="btn btn-secondary btn-sm ml-2">EN</button>
+            <button id="lang-ru" class="btn btn-secondary btn-sm">RU</button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <h1 data-translate="welcome">Welcome to our Book Store</h1>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <!-- Carousel items here -->
+            </div>
+            <h2 data-translate="featured">Featured Books</h2>
+            <div class="row">
+                <!-- Book cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section id="featured-books">
+        <div class="container">
+            <h2 data-translate="featured">Featured Books</h2>
+            <div class="row">
+                <!-- Featured book box 1 -->
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://cdn1.ozone.ru/s3/multimedia-y/6844404094.jpg" class="card-img-top" alt="Featured Book 1 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Преступление и наказание</h5>
+                            <p class="card-text">$20</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-translate="addToCart">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the same structure for other featured book boxes -->
+                <!-- Featured book box 2 -->
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://cdn.img-gorod.ru/nomenclature/23/989/2398921.jpg" class="card-img-top" alt="Featured Book 2 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Война и мир</h5>
+                            <p class="card-text">$25</p>                           
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-translate="addToCart">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured book box 3 -->
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://avatars.dzeninfra.ru/get-zen_doc/1856956/pub_5e98c0c4a6e0872a7ce02eb2_5e98c28743ac025bbbb78d97/scale_1200" class="card-img-top" alt="Featured Book 3 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Обломов</h5>
+                            <p class="card-text">$15</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-translate="addToCart">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured book box 4 -->
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://cdn1.ozone.ru/s3/multimedia-t/6496730801.jpg" class="card-img-top" alt="Featured Book 4 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Мастер и Маргарита</h5>
+                            <p class="card-text">$30</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-translate="addToCart">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Hover effect for the "Add To Cart" buttons */
+        .add-to-cart-btn:hover,
+        .add-to-cart-btn:focus {
+            background-color: darkgreen !important;
+        }
+
+        /* Green color for "Add To Cart" buttons */
+        .add-to-cart-btn {
+            background-color: green !important;
+            border-color: green !important;
+        }
+    </style>
+
+    <!-- Books Section -->
+    <section id="books">
+        <div class="container">
+            <h1 data-translate="books">Books</h1>
+            <div class="row">
+                <!-- Book box 1 -->
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://miro.medium.com/v2/resize:fit:1200/1*WhStOn7nYah0h6cW9Bo7jg.jpeg" class="card-img-top" alt="Book 1 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Мартин Иден</h5>
+                            <p class="card-text">$25</p>
+                                <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-translate="addToCart">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Rate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book box 2 -->
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://cdn1.ozone.ru/s3/multimedia-w/6443695136.jpg" class="card-img-top" alt="Book 2 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Унесенный ветром</h5>
+                            <p class="card-text">$20</p>
+                        <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-translate="addToCart">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Rate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book box 3 -->
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://img.engros.ru/images/1300x1500/1852376.jpg" class="card-img-top" alt="Book 3 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Анна Каренина</h5>
+                            <p class="card-text">$30</p>
+                        <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-translate="addToCart">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Rate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book box 4 -->
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://simg2.marwin.kz/media/catalog/product/c/o/cover1__w600_135_1054.jpg" class="card-img-top" alt="Book 4 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Отверженные</h5>
+                            <p class="card-text">$35</p>
+                        <button type="button" class="btn btn-primary btn-sm add-to-cart-btn" data-translate="addToCart">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Rate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h1 data-translate="about">About Us</h1>
+            <p data-translate="aboutText">We are a leading online bookstore with a wide range of books available in various genres and languages. Our mission is to promote reading culture and make books accessible to everyone.</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="container">
+            <h1 data-translate="contact">Contact Us</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-container">
+                        <h3 data-translate="address">Our Address</h3>
+                        <p data-translate="addressText">123 Bookstore Street, Reading Town, Bookland 12345</p>
+                        <h3 data-translate="phone">Phone</h3>
+                        <p><a href="tel:+1234567890" data-translate="phoneNumber">+1 234 567 890</a></p>
+                        <h3 data-translate="email">Email</h3>
+                        <p><a href="mailto:info@bookstore.com" data-translate="emailAddress">info@bookstore.com</a></p>
+                        <h3 data-translate="social">Follow Us</h3>
+                        <div class="social-media">
+                            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="map-container">
+                        <img src="https://www.pvsm.ru/images/vstrechaem-mai-i-2gis-3-6.png" alt="Map Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- News Section -->
+<section id="news">
+    <div class="container">
+        <h1 data-translate="news">Новости</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Новая коллекция книг!</h5>
+                        <p class="card-text">Познакомьтесь с нашей последней коллекцией книг, включающей новые бестселлеры и классику.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Специальная акция на лето!</h5>
+                        <p class="card-text">Не упустите шанс приобрести книги по специальной летней цене!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Онлайн-читалка теперь доступна!</h5>
+                        <p class="card-text">Теперь вы можете читать любимые книги онлайн с помощью нашей новой онлайн-читалки!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script>
+        const translations = {
+            en: {
+                home: 'Home',
+                books: 'Books',
+                about: 'About Us',
+                contact: 'Contact Us',
+                welcome: 'Welcome to our Book Store',
+                featured: 'Featured Books',
+                aboutText: 'We are a leading online bookstore with a wide range of books available in various genres and languages. Our mission is to promote reading culture and make books accessible to everyone.',
+                address: 'Our Address',
+                addressText: '123 Bookstore Street, Reading Town, Bookland 12345',
+                phone: 'Phone',
+                phoneNumber: '+1 234 567 890',
+                email: 'Email',
+                emailAddress: 'info@bookstore.com',
+                social: 'Follow Us',
+                addToCart: 'Add to Cart'
+            },
+            ru: {
+                home: 'Главная',
+                books: 'Книги',
+                about: 'О нас',
+                contact: 'Контакты',
+                welcome: 'Добро пожаловать в наш книжный магазин',
+                featured: 'Рекомендуемые книги',
+                aboutText: 'Мы являемся ведущим онлайн-магазином книг с широким ассортиментом книг различных жанров и языков. Наша миссия - пропагандировать культуру чтения и сделать книги доступными для всех.',
+                address: 'Наш адрес',
+                addressText: '123 Книжный переулок, Читающий город, Книжная страна 12345',
+                phone: 'Телефон',
+                phoneNumber: '+1 234 567 890',
+                email: 'Электронная почта',
+                emailAddress: 'info@bookstore.com',
+                social: 'Следите за нами',
+                addToCart: 'В корзину'
+            }
+        };
+
+        function translatePage(language) {
+            document.querySelectorAll('[data-translate]').forEach((element) => {
+                const key = element.getAttribute('data-translate');
+                element.innerText = translations[language][key];
+            });
+        }
+
+        document.getElementById('lang-en').addEventListener('click', () => translatePage('en'));
+        document.getElementById('lang-ru').addEventListener('click', () => translatePage('ru'));
+
+        // Default language
+        translatePage('en');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
